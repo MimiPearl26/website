@@ -1,0 +1,321 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    position: relative;
+}
+
+body {
+    width: 100%;
+    height: 50%;
+    background-image: url("glass.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: aqua;
+}
+
+button, input {
+    background-color: cadetblue;
+    outline: none;
+    border: 5px solid teal;
+    font-size: 25px;
+    margin-right: 70px;
+}
+
+.main-container {
+    width: 100%;
+    height: 80px;
+    background-color: none;
+    padding: 20px 0 20px 0;
+}
+
+.navbar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0;
+    background: aqua;
+}
+
+.logo {
+    width: 150px;
+    padding-top: 50px;
+
+}
+
+.logo img {
+    width: 80%;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.logo img:hover {
+    transform: translateY(-10px);
+    opacity: 0.6;
+    box-shadow:  0 10px 20px lawngreen;
+}
+
+
+
+.navbar ul{
+    list-style-type: none;
+   
+}
+
+.navbar ul li{
+    transition: 0.2s linear;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navbar ul a {
+    color: darkslategrey;
+    font-size: 25px;
+    position: relative;
+    transition: 0.2s linear;
+    padding-left: 2px;
+    margin-top: 20px;
+}
+
+.navbar ul a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 3px;
+    background-color: azure;
+    transition: 0.2s linear;
+}
+
+.navbar ul a:hover {
+    color: lawngreen;
+    width: 100%;
+}
+
+.container img {
+    height: 300px;
+    float: right;
+    border-radius: 50%;
+    margin-top: -20px;
+    margin-right: 80px;
+    
+}
+
+.container img:hover {
+    transform: translateY(-10px);
+    opacity: 0.7;
+    transition: transform 0.3s ease box-shadow 0.3s ease;
+    box-shadow:  10px 10px 10px 10px azure;
+}
+
+.container-2 img {
+    height: 300px;
+    float: right;
+    border-radius: 50%;
+    display: flex;
+    margin-top: 250px;
+    margin-right: -300px;
+}
+
+.container-2 img:hover {
+    transform: translateY(-10px);
+    opacity: 0.7;
+    box-shadow: 10px 10px 10px 10px fuchsia;
+    transition: transform 0.3s ease box-shadow 0.3s ease;
+}
+
+.login-button, .btn-sec button {
+    background-color: cadetblue;
+    color: azure;
+    width: auto;
+    padding: 0;
+    height: 50px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 30px;
+    border: 2px solid cyan;
+    transition: 0.3s linear;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-btn:hover, .btn-sec button:hover {
+    background-color: transparent;
+    color: wheat;
+    border: 2px solid azure;
+}
+
+.bottom-content {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+
+}
+
+.bottom-left {
+    width: 50%;
+    height: fit-content;
+    margin-top: 50px;
+}
+
+.bottom-left h1 {
+    color: aqua;
+    font-size: 6rem;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    line-height: 80px;
+    font-family: cursive;
+    text-transform: uppercase;
+    padding-left: 20px;
+    margin-top: -250px;
+    text-align: center;
+}
+
+.bottom-left h1:hover {
+    color: fuchsia;
+    text-shadow: 5px 5px 5px azure;
+    transition: 0.2s linear;
+}
+
+
+.bottom-left p {
+    font-size: 25px;
+    color: rgb(0, 255, 255);
+    font-family: 300;
+    margin: 30px 0 30px 0;
+    padding-left: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+
+}
+
+.bottom-left p:hover {
+    color: fuchsia;
+    text-decoration: underline azure;
+    transition: 0.2s linear;
+}
+
+.btn-sec {
+    display: flex;
+    gap: 0;
+}
+
+.btn-sec button:last-child {
+    border: 2px solid burlywood;
+    background-color: transparent;
+    color: azure;
+}
+
+.btn-sec button:last-child:hover {
+    background-color: azure;
+    color: rgb(0, 200, 255);
+}
+
+@media (max-width:1100px) {
+    .main-container {
+        padding: 0.5%;
+    }
+
+
+   .bottom-left h1{
+    width: 100%;
+    font-size: 60px;
+    line-height: 60px;
+   }
+
+   .bottom-left p {
+    font-size: 14px;
+   }
+
+}
+
+@media (max-width: 800px) {
+    .logo {
+        width: 70px;
+        z-index: 1000;
+    }
+
+    .login-btn{
+        z-index: 1000;
+        margin-top: -10px;
+    }
+
+    .login-btn, .btn-sec button {
+        padding: 10px 10px;
+        font-size: 20px;
+    }
+
+    .nav-btn {
+        width: fit-content;
+        display: flex;
+        gap: 0;
+    }
+
+    .navbar ul {
+        display: none;
+        position: absolute;
+        left: -5%;
+        top: 0;
+        width: 110%;
+        background-color: black;
+        z-index: 100;
+        padding: 80px 0 25px 0;
+    }
+
+    .navbar ul li {
+        width: 100%;
+        text-align: center;
+        margin: 8px 0;
+    }
+
+    .login-btn {
+        z-index: 1000;
+    }
+
+    .navbar ul :active {
+        display: block;
+    }
+
+    .bottom-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bottom-left {
+        max-width: 450px;
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .bottom-left h1 {
+        font-size: 45px;
+        line-height: 45px;
+    }
+
+    .btn-sec {
+        gap: 10px;
+    }
+}
+
